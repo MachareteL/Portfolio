@@ -1,4 +1,10 @@
 import mypicture from "./assets/me.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwipperCard from "./components/swipperCard";
+import { Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import placeholder from "./assets/btmbkpg.jpg";
 
 export default function Index() {
   return (
@@ -33,6 +39,52 @@ export default function Index() {
         <main className="container mx-auto">
           <h1 className="title text-3xl">Recent projects</h1>
         </main>
+
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={3}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          modules={[Pagination]}
+          pagination={{
+            clickable: true,
+            dynamicBullets: true,
+          }}
+          loop={true}
+          navigation={true}
+          className="mySwiper"
+          breakpoints={{
+            0: {
+              slidesPerView: 2,
+            },
+            768: {
+              width: 768,
+              slidesPerView: 1,
+            },
+          }}
+        >
+          <SwiperSlide className="md:ml-36 w-3/4">
+            <SwipperCard imgsrc={placeholder} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SwipperCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SwipperCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SwipperCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SwipperCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SwipperCard />
+          </SwiperSlide>
+          <SwiperSlide>
+            <SwipperCard />
+          </SwiperSlide>
+        </Swiper>
       </div>
     </>
   );
