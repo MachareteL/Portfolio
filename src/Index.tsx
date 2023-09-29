@@ -1,10 +1,12 @@
+import "swiper/css";
+import "swiper/css/pagination";
 import mypicture from "./assets/me.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwipperCard from "./components/swipperCard";
 import { Pagination, Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
 import placeholder from "./assets/btmbkpg.jpg";
+
+import io from "./assets/controlIO.png";
 
 export default function Index() {
   return (
@@ -63,8 +65,8 @@ export default function Index() {
             },
           }}
         >
-          <SwiperSlide className="md:ml-36 w-3/4">
-            <SwipperCard imgsrc={placeholder} />
+          <SwiperSlide className="w-3/4 md:ml-36">
+            <SwipperCard imgsrc={io} />
           </SwiperSlide>
           <SwiperSlide>
             <SwipperCard />
