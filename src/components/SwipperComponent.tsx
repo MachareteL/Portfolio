@@ -3,6 +3,10 @@ import "swiper/css/pagination"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper/modules"
 import io from "../assets/controlIO.png"
+import ekballo from "../assets/ekballolp.png"
+import relly from "../assets/relly.png"
+import clear from "../assets/clear.png"
+import etsland from "../assets/ETSLAND.png"
 import SwipperCard from "./SwipperCard"
 
 export default function SwipperComponent() {
@@ -34,22 +38,16 @@ export default function SwipperComponent() {
         <SwipperCard imgsrc={io} />
       </SwiperSlide>
       <SwiperSlide className="ml-10 w-3/4 md:ml-36">
-        <SwipperCard imgsrc={io} />
+        <SwipperCard imgsrc={ekballo} />
       </SwiperSlide>
       <SwiperSlide className="ml-10 w-3/4 md:ml-36">
-        <SwipperCard imgsrc={io} />
+        <SwipperCard imgsrc={relly} />
       </SwiperSlide>
       <SwiperSlide className="ml-10 w-3/4 md:ml-36">
-        <SwipperCard imgsrc={io} />
+        <SwipperCard imgsrc={etsland} />
       </SwiperSlide>
       <SwiperSlide className="ml-10 w-3/4 md:ml-36">
-        <SwipperCard imgsrc={io} />
-      </SwiperSlide>
-      <SwiperSlide className="ml-10 w-3/4 md:ml-36">
-        <SwipperCard imgsrc={io} />
-      </SwiperSlide>
-      <SwiperSlide className="ml-10 w-3/4 md:ml-36">
-        <SwipperCard imgsrc={io} />
+        <SwipperCard imgsrc={clear} />
       </SwiperSlide>
     </Swiper>
   )
