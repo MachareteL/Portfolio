@@ -1,12 +1,5 @@
-import "swiper/css";
-import "swiper/css/pagination";
-import mypicture from "./assets/me.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwipperCard from "./components/swipperCard";
-import { Pagination, Navigation } from "swiper/modules";
-import placeholder from "./assets/btmbkpg.jpg";
-
-import io from "./assets/controlIO.png";
+import mypicture from './assets/me.png'
+import SwipperComponent from './components/SwipperComponent'
 
 export default function Index() {
   return (
@@ -31,7 +24,8 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="h-screen bg-white py-4">
+
+      <div className="bg-white py-4">
         <hgroup className="mt-10 text-center">
           <h1 className="title text-3xl">About me</h1>
           <h2 className="subtitle text-xl font-bold text-wine">
@@ -39,55 +33,27 @@ export default function Index() {
           </h2>
         </hgroup>
         <main className="container mx-auto">
-          <h1 className="title text-3xl">Recent projects</h1>
+          <h1 className="title p-4 text-3xl">Recent projects</h1>
         </main>
-
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          // onSlideChange={() => console.log("slide change")}
-          // onSwiper={(swiper) => console.log(swiper)}
-          modules={[Pagination]}
-          pagination={{
-            clickable: true,
-            dynamicBullets: true,
-          }}
-          loop={true}
-          navigation={true}
-          className="mySwiper"
-          breakpoints={{
-            0: {
-              slidesPerView: 2,
-            },
-            768: {
-              width: 768,
-              slidesPerView: 1,
-            },
-          }}
-        >
-          <SwiperSlide className="w-3/4 md:ml-36">
-            <SwipperCard imgsrc={io} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SwipperCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SwipperCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SwipperCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SwipperCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SwipperCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <SwipperCard />
-          </SwiperSlide>
-        </Swiper>
+        <SwipperComponent />
+      </div>
+      <div className="relative h-screen">
+        <div className="absolute left-1/2 h-screen w-px translate-x-1/2 bg-black" />
+        <div className="grid grid-cols-2 gap-2">
+          <div className="place-self-end">
+            <h1 className="title text-3xl">Front-end</h1>
+            <h2 className="subtitle text-xl font-extrabold text-wine">
+              skills
+            </h2>
+          </div>
+          <div className="">
+            <h1 className="title text-3xl">back-end</h1>
+            <h2 className="subtitle text-xl font-extrabold text-wine">
+              skills
+            </h2>
+          </div>
+        </div>
       </div>
     </>
-  );
+  )
 }
