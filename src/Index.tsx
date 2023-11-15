@@ -3,6 +3,11 @@ import mypicture from "./assets/me.png"
 import SwipperComponent from "./components/SwipperComponent"
 import programmingAmico from "./assets/Programming-amico.svg"
 import codingAmico from "./assets/code-development-amico.svg"
+import phoneAmico from "./assets/confirmed-attendance.svg"
+import githubIcon from "./assets/github-mark-white.svg"
+import instagramIcon from "./assets/iconmonstr-instagram-11.svg"
+import linkedinIcon from "./assets/iconmonstr-linkedin-3.svg"
+import darkModeAmico from "./assets/Dark-mode-amico.svg"
 import Skills from "./components/Skills"
 import fristWave from "./assets/LightGrayWave.svg"
 import secondWave from "./assets/DarkGrayWave.svg"
@@ -11,16 +16,6 @@ import AOS from "aos"
 
 export default function Index() {
   AOS.init()
-  const technologies = [
-    { src: "https://via.placeholder.com/150" },
-    { src: "https://via.placeholder.com/150" },
-    { src: "https://via.placeholder.com/150" },
-    { src: "https://via.placeholder.com/150" },
-    { src: "https://via.placeholder.com/150" },
-    { src: "https://via.placeholder.com/150" },
-    { src: "https://via.placeholder.com/150" },
-    { src: "https://via.placeholder.com/150" },
-  ]
   return (
     <>
       <div
@@ -66,13 +61,17 @@ export default function Index() {
               alt="programming"
               className="order-2 w-40 lg:w-96"
               data-aos="fade-right"
+              data-aos-easing="ease-in-back"
+              data-aos-anchor-placement="top-center"
+              data-aos-offset="10"
             />
             <div className="flex lg:order-2">
               <p className="quicksand p-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Molestias sapiente rem dignissimos aliquam quis molestiae natus,
-                atque, nisi minus deserunt sequi numquam cumque quos ex autem,
-                aspernatur expedita hic sit!
+                Beyond HTML, CSS, and JavaScript, I enjoy delving into web
+                frameworks to explore the solutions they bring to the table and
+                the problems these technologies address. I'm curious about how
+                they tackle these challenges, the methods they employ, and
+                determining the optimal tool for the job.
               </p>
             </div>
           </div>
@@ -90,6 +89,9 @@ export default function Index() {
               alt="programming"
               className="w-40 lg:w-96"
               data-aos="fade-right"
+              data-aos-easing="ease-in-back"
+              data-aos-anchor-placement="top-center"
+              data-aos-offset="10"
             />
           </div>
         </div>
@@ -100,6 +102,9 @@ export default function Index() {
               alt="programming"
               className="order-2 w-40 lg:w-96"
               data-aos="fade-right"
+              data-aos-easing="ease-in-back"
+              data-aos-anchor-placement="top-center"
+              data-aos-offset="10"
             />
             <div className="flex lg:order-2">
               <p className="quicksand p-4">
@@ -120,10 +125,12 @@ export default function Index() {
               </p>
             </div>
             <img
-              src={codingAmico}
+              src={darkModeAmico}
               alt="programming"
               className="w-40 lg:w-96"
               data-aos="fade-right"
+              data-aos-easing="ease-in-back"
+              data-aos-anchor-placement="center-center"
             />
           </div>
         </div>
@@ -149,12 +156,65 @@ export default function Index() {
         </div>
       </div>
       <div className="relative h-screen bg-[url('assets/btmbkpg.jpg')] bg-cover bg-center before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-black before:opacity-70">
-        <div className="container relative z-20 mx-auto flex h-full flex-wrap items-center gap-4 xl:p-16">
-          <h1 className="title py-4 text-5xl text-white">
-            Get in touch
-          </h1>
-          <div className="container rounded-2xl border bg-gray-500 bg-opacity-30 backdrop-blur-lg sm:px-2 sm:py-8 xl:px-8 xl:py-24">
-            
+        <div className="container relative z-20 mx-auto flex h-full flex-wrap items-center gap-4 px-4 xl:p-16">
+          <h1 className="title py-4 text-5xl text-white">Get in touch</h1>
+          <div className="container mb-24 sm:mb-48 grid rounded-2xl border bg-gray-500 bg-opacity-30 text-white backdrop-blur-lg md:grid-cols-2">
+            <div className="px-4 py-2 ">
+              <h1 className="title py-4 text-xl">
+                Reach me out in my social media
+              </h1>
+              <p className="quicksand">
+                Feel free to get in touch through social media.
+              </p>
+              <div className="grid grid-cols-2">
+                <div className="grid grid-rows-3 items-center">
+                  <span className="flex items-center gap-2">
+                    <img className="w-10" src={githubIcon} alt="" />
+                    Check my most recent projects in my github
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <img className="w-10" src={instagramIcon} alt="" />
+                    More of me in my instagram
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <img className="w-10" src={linkedinIcon} alt="" />
+                    Some of my career at my linkedin
+                  </span>
+                </div>
+                <img src={phoneAmico} alt="" className="w-96" />
+              </div>
+            </div>
+            <div className="px-4 backdrop-blur-lg">
+              <h1 className="title py-4 text-xl ">Or send me a message!</h1>
+              <form className="quicksand grid grid-rows-3">
+                <label htmlFor="name">Your name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  className="rounded-lg border bg-transparent px-2 py-px"
+                />
+                <label htmlFor="email">Your E-mail</label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  className="rounded-lg border bg-transparent px-2 py-px"
+                />
+                <label htmlFor="message">Your Message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  rows={4}
+                  className="resize-none rounded-lg border bg-transparent px-2 py-px"
+                />
+                <input
+                  type="submit"
+                  value="Send"
+                  className="my-2 justify-self-end text-clip rounded-md bg-white px-4 py-2 font-bold text-black mix-blend-multiply"
+                />
+              </form>
+            </div>
           </div>
         </div>
       </div>
