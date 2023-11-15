@@ -9,4 +9,3 @@ export function SwipperCard({ imgsrc }: { imgsrc: string }) {
     </div>
   )
 }
-''
