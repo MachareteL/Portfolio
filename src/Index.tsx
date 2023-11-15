@@ -8,6 +8,7 @@ import githubIcon from "./assets/github-mark-white.svg"
 import instagramIcon from "./assets/iconmonstr-instagram-11.svg"
 import linkedinIcon from "./assets/iconmonstr-linkedin-3.svg"
 import darkModeAmico from "./assets/Dark-mode-amico.svg"
+import sourceCodeAmico from "./assets/Source code-amico.svg"
 import Skills from "./components/Skills"
 import fristWave from "./assets/LightGrayWave.svg"
 import secondWave from "./assets/DarkGrayWave.svg"
@@ -98,7 +99,7 @@ export default function Index() {
         <div className="grid lg:grid-cols-2">
           <div className="flex">
             <img
-              src={programmingAmico}
+              src={sourceCodeAmico}
               alt="programming"
               className="order-2 w-40 lg:w-96"
               data-aos="fade-right"
