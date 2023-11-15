@@ -7,7 +7,7 @@ import ekballo from "../assets/ekballolp.png"
 import relly from "../assets/relly.png"
 import clear from "../assets/clear.png"
 import etsland from "../assets/ETSLAND.png"
-import SwipperCard from "./SwipperCard"
+import { SwipperCard } from "./SwipperCard"
 
 export default function SwipperComponent() {
   return (

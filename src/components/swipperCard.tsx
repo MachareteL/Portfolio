@@ -1,4 +1,4 @@
-export default function SwipperCard({ imgsrc }: { imgsrc: string }) {
+export function SwipperCard({ imgsrc }: { imgsrc: string }) {
   return (
     <div className="relative mb-10 w-full cursor-pointer overflow-hidden rounded-2xl bg-red-500 pb-14 pt-40 shadow-md shadow-black md:pt-72">
       <img
@@ -9,3 +9,4 @@ export default function SwipperCard({ imgsrc }: { imgsrc: string }) {
     </div>
   )
 }
+''
