@@ -43,8 +43,8 @@ export default function Index() {
         <hgroup className="container mx-auto mt-10 p-4">
           <h1 className="title text-3xl">About me</h1>
           <div className="quicksand text-xl">
-            // here it goes all the information about myself and some of my
-            personal life
+{/*             // here it goes all the information about myself and some of my
+            personal life */}
           </div>
         </hgroup>
         <h1 className="title container mx-auto p-4 text-2xl">
