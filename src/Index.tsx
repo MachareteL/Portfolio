@@ -21,7 +21,7 @@ export default function Index() {
     <>
       <div
         id="main"
-        className="relative h-screen bg-[url('assets/mbkpg.jpg')] bg-cover bg-fixed bg-center before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-black before:opacity-70"
+        className="relative h-screen bg-[url('assets/mbkpg.png')] bg-cover bg-fixed bg-center before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-black before:opacity-70"
       >
         <div className="ms:justify-between container relative z-20 mx-auto flex h-full flex-col items-center justify-center sm:flex-row sm:justify-between">
           <hgroup className="title order-2 p-10 text-3xl text-white sm:order-1 sm:text-6xl">
@@ -40,19 +40,20 @@ export default function Index() {
         </div>
       </div>
       <div className="bg-white py-4">
-        <hgroup className="mt-10 text-center">
+        <hgroup className="container mx-auto mt-10 p-4">
           <h1 className="title text-3xl">About me</h1>
-          <h2 className="quicksand text-xl font-bold text-wine">
-            Web Developer
-          </h2>
+          <div className="quicksand text-xl">
+            // here it goes all the information about myself and some of my
+            personal life
+          </div>
         </hgroup>
-        <h1 className="title container mx-auto p-4 text-3xl">
+        <h1 className="title container mx-auto p-4 text-2xl">
           Recent projects
         </h1>
         <SwipperComponent />
       </div>
       <div className="relative">
-        <h1 className="title container mx-auto p-4 text-3xl">World View</h1>
+        <h1 className="title container mx-auto p-4 text-2xl">World View</h1>
         <div className="absolute left-1/2 hidden h-screen w-px translate-x-1/2 bg-black lg:block" />
         <Skills />
         <div className="grid lg:grid-cols-2">
@@ -79,10 +80,10 @@ export default function Index() {
           <div className="flex lg:mt-32">
             <div className="flex">
               <p className="quicksand p-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Molestias sapiente rem dignissimos aliquam quis molestiae natus,
-                atque, nisi minus deserunt sequi numquam cumque quos ex autem,
-                aspernatur expedita hic sit!
+                "What's the best technology?" <br /> - it's the one that solves
+                our problem. An open mind to learn and the determination to make
+                things happen, that's what we need when it comes to digital
+                solutions.
               </p>
             </div>
             <img
@@ -109,20 +110,17 @@ export default function Index() {
             />
             <div className="flex lg:order-2">
               <p className="quicksand p-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Molestias sapiente rem dignissimos aliquam quis molestiae natus,
-                atque, nisi minus deserunt sequi numquam cumque quos ex autem,
-                aspernatur expedita hic sit!
+                Creativity, the mother of solutions. We need to be creative to
+                be able to build solutions and solve problems, and that's what a
+                developer do!
               </p>
             </div>
           </div>
           <div className="flex lg:mt-32">
             <div className="flex">
               <p className="quicksand p-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Molestias sapiente rem dignissimos aliquam quis molestiae natus,
-                atque, nisi minus deserunt sequi numquam cumque quos ex autem,
-                aspernatur expedita hic sit!
+                <b>SOLID</b>, that's what a software needs to be. <b>KISS</b> the state of art
+                is the dream of every developer. <b>DRY</b> the solutions for better results
               </p>
             </div>
             <img
@@ -159,7 +157,7 @@ export default function Index() {
       <div className="relative h-screen bg-[url('assets/btmbkpg.jpg')] bg-cover bg-center before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-black before:opacity-70">
         <div className="container relative z-20 mx-auto flex h-full flex-wrap items-center gap-4 px-4 xl:p-16">
           <h1 className="title py-4 text-5xl text-white">Get in touch</h1>
-          <div className="container mb-24 sm:mb-48 grid rounded-2xl border bg-gray-500 bg-opacity-30 text-white backdrop-blur-lg md:grid-cols-2">
+          <div className="container mb-24 grid rounded-2xl border bg-gray-500 bg-opacity-30 text-white backdrop-blur-lg sm:mb-48 md:grid-cols-2">
             <div className="px-4 py-2 ">
               <h1 className="title py-4 text-xl">
                 Reach me out in my social media
@@ -171,15 +169,30 @@ export default function Index() {
                 <div className="grid grid-rows-3 items-center">
                   <span className="flex items-center gap-2">
                     <img className="w-10" src={githubIcon} alt="" />
-                    Check my most recent projects in my github
+                    <p>
+                      Check my most recent projects in my{" "}
+                      <a href="" className="underline">
+                        github
+                      </a>
+                    </p>
                   </span>
                   <span className="flex items-center gap-2">
                     <img className="w-10" src={instagramIcon} alt="" />
-                    More of me in my instagram
+                    <p>
+                      More of me in my{" "}
+                      <a href="" className="underline">
+                        instagram
+                      </a>
+                    </p>
                   </span>
                   <span className="flex items-center gap-2">
                     <img className="w-10" src={linkedinIcon} alt="" />
-                    Some of my career at my linkedin
+                    <p>
+                      Some of my career at my{" "}
+                      <a href="" className="underline">
+                        linkedin
+                      </a>
+                    </p>
                   </span>
                 </div>
                 <img src={phoneAmico} alt="" className="w-96" />
@@ -212,7 +225,7 @@ export default function Index() {
                 <input
                   type="submit"
                   value="Send"
-                  className="my-2 justify-self-end text-clip rounded-md bg-white px-4 py-2 font-bold text-black mix-blend-multiply"
+                  className="my-2 cursor-pointer justify-self-end text-clip rounded-md bg-white px-4 py-2 font-bold text-black mix-blend-multiply hover:opacity-90"
                 />
               </form>
             </div>
