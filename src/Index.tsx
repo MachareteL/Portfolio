@@ -23,7 +23,7 @@ export default function Index() {
         id="main"
         className="relative h-screen bg-[url('assets/mbkpg.png')] bg-cover bg-fixed bg-center before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-black before:opacity-70"
       >
-        <div className="ms:justify-between container relative z-20 mx-auto flex h-full flex-col items-center justify-center sm:flex-row sm:justify-between">
+        <div className="ms:justify-between container relative z-20 mx-auto flex h-full flex-col items-center justify-center sm:flex-row sm:justify-between px-12">
           <hgroup className="title order-2 p-10 text-3xl text-white sm:order-1 sm:text-6xl">
             <h1 className="">Hello World!</h1>
             <hgroup className="flex">
